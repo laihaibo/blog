@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="margin,BFC,collapse," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="Web Front-End Blog by Lai Haibo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Lai Haibo">
-<meta property="og:url" content="http://laihaibo.github.io/blog/archives/index.html">
+<meta name="description" content="如何解决margin塌陷
+首先解释一个概念：Block Formatting Context意为块级格式化上下文，缩写为BFC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何解决margin塌陷(collapse)">
+<meta property="og:url" content="http://laihaibo.github.io/blog/2016/07/06/css-margin-collapse/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="Web Front-End Blog by Lai Haibo">
+<meta property="og:description" content="如何解决margin塌陷
+首先解释一个概念：Block Formatting Context意为块级格式化上下文，缩写为BFC">
+<meta property="og:updated_time" content="2016-07-06T02:59:50.775Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Lai Haibo">
-<meta name="twitter:description" content="Web Front-End Blog by Lai Haibo">
+<meta name="twitter:title" content="如何解决margin塌陷(collapse)">
+<meta name="twitter:description" content="如何解决margin塌陷
+首先解释一个概念：Block Formatting Context意为块级格式化上下文，缩写为BFC">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://laihaibo.github.io/blog/archives/"/>
+  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/07/06/css-margin-collapse/"/>
 
-  <title> Archive | Blog of Lai Haibo </title>
+  <title> 如何解决margin塌陷(collapse) | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,140 +251,180 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      Um..! 3 posts in total. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/06/css-margin-collapse/" itemprop="url">
-              
-                <span itemprop="name">如何解决margin塌陷(collapse)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-06T10:23:17+08:00"
-              content="2016-07-06" >
-          07-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/03/put-blog-in-a-subdirectory/" itemprop="url">
-              
-                <span itemprop="name">将hexo blog放在gitpage的子目录中</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-03T13:42:04+08:00"
-              content="2016-07-03" >
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/03/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-03T10:21:06+08:00"
-              content="2016-07-03" >
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                如何解决margin塌陷(collapse)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-06T10:23:17+08:00" content="2016-07-06">
+              2016-07-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/07/06/css-margin-collapse/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/06/css-margin-collapse/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如何解决margin塌陷</p>
+<p>首先解释一个概念：Block Formatting Context<br>意为块级格式化上下文，缩写为BFC<br><a id="more"></a><br>在一个块级格式化上下文的元素内部的盒子</p>
+<ul>
+<li>内部的Box会在垂直方向，从顶部开始一个接一个地放置。</li>
+<li>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生叠加</li>
+<li>每个元素的margin 子元素盒子的的左边， 与包含块border 父元素盒的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</li>
+<li>BFC的区域不会与float box叠加。</li>
+<li>计算BFC的高度时，浮动元素也参与计算。</li>
+</ul>
+<p>下列情况将创建一个块格式化上下文：</p>
+<blockquote>
+<p>根元素或其它包含它的元素<br>浮动 (元素的 float 不为 none)<br>绝对定位元素 (元素的 position 为 absolute 或 fixed)<br>行内块 inline-blocks (元素的 display: inline-block)<br>表格单元格 (元素的 display: table-cell，HTML表格单元格默认属性)<br>表格标题 (元素的 display: table-caption, HTML表格标题默认属性)<br>overflow 的值不为 visible的元素<br>弹性盒子 flex boxes (元素的 display: flex 或 inline-flex)<br>摘自 MDN</p>
+<p>链接：<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</a></p>
+</blockquote>
+<h2 id="什么是塌陷"><a href="#什么是塌陷" class="headerlink" title="什么是塌陷"></a>什么是塌陷</h2><blockquote>
+<p>一个BFC的内的相邻盒或者父子盒排列时，会取两个盒子相邻边的最大margin作为相邻边的共用marging</p>
+</blockquote>
+<p>换言之，就是说：</p>
+<ol>
+<li>对于上下两个并列的块盒子而言，上面盒子的margin-bottom和下面盒子的margin-top会塌陷，也就是会取上下两者margin里最大值作为显示值</li>
+<li>对于父块盒子内含子块盒子的情况，如果父盒子没有垂直边框和填充,那其高度就是其子盒子顶部和底部边框边缘之间的距离</li>
+</ol>
+<p>另外，还有一种情况也会发生塌陷：</p>
+<ol>
+<li>块级框自身发生collapce现象：即当垂直padding和height为零时，上下外边距会发生塌陷</li>
+</ol>
+<h2 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h2><ul>
+<li>设置padding和border进行隔离</li>
+<li>创建BFC，因为创建了BFC的元素不会与子元素和外部毗邻元素发生collapse</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/margin/" rel="tag">#margin</a>
+          
+            <a href="/blog/tags/BFC/" rel="tag">#BFC</a>
+          
+            <a href="/blog/tags/collapse/" rel="tag">#collapse</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/07/03/put-blog-in-a-subdirectory/" rel="next" title="将hexo blog放在gitpage的子目录中">
+                <i class="fa fa-chevron-left"></i> 将hexo blog放在gitpage的子目录中
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/06/css-margin-collapse/"
+     data-title="如何解决margin塌陷(collapse)"
+     data-content=""
+     data-url="http://laihaibo.github.io/blog/blog/2016/07/06/css-margin-collapse/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -388,6 +432,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/06/css-margin-collapse/"
+           data-title="如何解决margin塌陷(collapse)" data-url="http://laihaibo.github.io/blog/blog/2016/07/06/css-margin-collapse/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -407,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/blog/images/avatar.gif"
@@ -471,6 +532,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是塌陷"><span class="nav-number">1.</span> <span class="nav-text">什么是塌陷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决"><span class="nav-number">2.</span> <span class="nav-text">如何解决</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -567,11 +639,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   

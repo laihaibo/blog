@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[如何解决margin塌陷(collapse)]]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/07/06/css-margin-collapse/</url>
+      <content type="html"><![CDATA[<p>如何解决margin塌陷</p>
+<p>首先解释一个概念：Block Formatting Context<br>意为块级格式化上下文，缩写为BFC<br><a id="more"></a><br>在一个块级格式化上下文的元素内部的盒子</p>
+<ul>
+<li>内部的Box会在垂直方向，从顶部开始一个接一个地放置。</li>
+<li>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生叠加</li>
+<li>每个元素的margin 子元素盒子的的左边， 与包含块border 父元素盒的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</li>
+<li>BFC的区域不会与float box叠加。</li>
+<li>计算BFC的高度时，浮动元素也参与计算。</li>
+</ul>
+<p>下列情况将创建一个块格式化上下文：</p>
+<blockquote>
+<p>根元素或其它包含它的元素<br>浮动 (元素的 float 不为 none)<br>绝对定位元素 (元素的 position 为 absolute 或 fixed)<br>行内块 inline-blocks (元素的 display: inline-block)<br>表格单元格 (元素的 display: table-cell，HTML表格单元格默认属性)<br>表格标题 (元素的 display: table-caption, HTML表格标题默认属性)<br>overflow 的值不为 visible的元素<br>弹性盒子 flex boxes (元素的 display: flex 或 inline-flex)<br>摘自 MDN</p>
+<p>链接：<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</a></p>
+</blockquote>
+<h2 id="什么是塌陷"><a href="#什么是塌陷" class="headerlink" title="什么是塌陷"></a>什么是塌陷</h2><blockquote>
+<p>一个BFC的内的相邻盒或者父子盒排列时，会取两个盒子相邻边的最大margin作为相邻边的共用marging</p>
+</blockquote>
+<p>换言之，就是说：</p>
+<ol>
+<li>对于上下两个并列的块盒子而言，上面盒子的margin-bottom和下面盒子的margin-top会塌陷，也就是会取上下两者margin里最大值作为显示值</li>
+<li>对于父块盒子内含子块盒子的情况，如果父盒子没有垂直边框和填充,那其高度就是其子盒子顶部和底部边框边缘之间的距离</li>
+</ol>
+<p>另外，还有一种情况也会发生塌陷：</p>
+<ol>
+<li>块级框自身发生collapce现象：即当垂直padding和height为零时，上下外边距会发生塌陷</li>
+</ol>
+<h2 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h2><ul>
+<li>设置padding和border进行隔离</li>
+<li>创建BFC，因为创建了BFC的元素不会与子元素和外部毗邻元素发生collapse</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[将hexo blog放在gitpage的子目录中]]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/07/03/put-blog-in-a-subdirectory/</url>
+      <content type="html"><![CDATA[<p>将hexo blog放在gitpage的子目录中</p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>将自己写的页面设置为<code>http://user.github.io</code>的主页面，然后访问<code>http://user.github.io/blog</code>进入hexo blog<br><a id="more"></a></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>Github支持在任意仓库中搭建静态博客，只需要将静态网页放置在gh-pages分支下，此时可以通过<code>http://user.github.io/repo-name</code>就可以访问了，同理如果主仓库绑定了域名，同样可以通过域名/仓库名的方式来访问</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
+<li>将自己写的index.html放在在user.github.io这个repository中</li>
+<li>新建一个repository，命名为blog，并创建一个gh-pages分支</li>
+<li>将<code>_config.yml</code>中的<code>url</code>设置为<code>http://user.github.io/blog</code>，<code>root</code>设置为<code>/blog/</code></li>
+<li>然后将<code>deploy</code>中的<code>repo</code>设置为<code>https://github.com/user/blog.git</code>，<code>brunch</code>设置为<code>gh-pages</code></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/07/03/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
