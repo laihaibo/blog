@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title><![CDATA[在ubuntu16.04下安装nodejs]]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/07/06/install-nodejs-in-ubuntu/</url>
+      <content type="html"><![CDATA[<p>系统环境：ubuntu16.04<br>Nodejs版本：4.4.7<br>时间：2016.07.06</p>
+<p>由于通过<code>sudo apt-get install nodejs</code>命令下载的node版本过旧，<a id="more"></a>根据nodejs官方的提供的解决方案（<a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions）" target="_blank" rel="external">https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions）</a></p>
+<blockquote>
+<p>Debian and Ubuntu based Linux distributions</p>
+</blockquote>
+<p>可以通过在终端输入以下命令来安装最新版本的nodejs：<br>(ubuntu官方建议在ubuntu 16.04中使用apt命令，即用<code>apt install</code>代替<code>apt-get install</code>。而且apt命令还有一个特点，就是可以直接在终端中显示进度条并高亮一些信息)</p>
+<ul>
+<li><code>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</code>(长期支持版本v4，二选一)</li>
+<li><code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code>（最新版本v6，二选一）</li>
+<li><code>sudo apt install -y nodejs</code><br>然后下载一个编译工具，用于从npm编译安装附加组件</li>
+<li><code>sudo apt install -y build-essential</code></li>
+</ul>
+<p>安装完成后可以查看nodejs与npm版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">:~$ node -v</div><div class="line">v4.4.7</div><div class="line">:~$ npm -v</div><div class="line">2.15.8</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[如何解决margin塌陷(collapse)]]></title>
       <url>http://laihaibo.github.io/blog/blog/2016/07/06/css-margin-collapse/</url>
       <content type="html"><![CDATA[<p>如何解决margin塌陷</p>
