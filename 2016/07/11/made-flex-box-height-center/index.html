@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="flex,height,center,align-items," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="Web Front-End Blog by Lai Haibo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Lai Haibo">
-<meta property="og:url" content="http://laihaibo.github.io/blog/archives/index.html">
+<meta name="description" content="问题目前实现全屏垂直居中最好的方式之一应该是CSS3中使用flex布局，设置父容器body{display:flex;justify-content:center;align-items:center;}然后再为其设置一个{height:100%;width:100%;}。但此时似乎并不奏效，元素仍然贴合在顶部。
+原因父元素高度没有被撑起。查阅网上的解决方案，大部分回答都是要设置html{hei">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设置flex容器中的一个值使得align-items垂直居中">
+<meta property="og:url" content="http://laihaibo.github.io/blog/2016/07/11/made-flex-box-height-center/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="Web Front-End Blog by Lai Haibo">
+<meta property="og:description" content="问题目前实现全屏垂直居中最好的方式之一应该是CSS3中使用flex布局，设置父容器body{display:flex;justify-content:center;align-items:center;}然后再为其设置一个{height:100%;width:100%;}。但此时似乎并不奏效，元素仍然贴合在顶部。
+原因父元素高度没有被撑起。查阅网上的解决方案，大部分回答都是要设置html{hei">
+<meta property="og:updated_time" content="2016-07-11T02:35:02.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Lai Haibo">
-<meta name="twitter:description" content="Web Front-End Blog by Lai Haibo">
+<meta name="twitter:title" content="设置flex容器中的一个值使得align-items垂直居中">
+<meta name="twitter:description" content="问题目前实现全屏垂直居中最好的方式之一应该是CSS3中使用flex布局，设置父容器body{display:flex;justify-content:center;align-items:center;}然后再为其设置一个{height:100%;width:100%;}。但此时似乎并不奏效，元素仍然贴合在顶部。
+原因父元素高度没有被撑起。查阅网上的解决方案，大部分回答都是要设置html{hei">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://laihaibo.github.io/blog/archives/"/>
+  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/07/11/made-flex-box-height-center/"/>
 
-  <title> Archive | Blog of Lai Haibo </title>
+  <title> 设置flex容器中的一个值使得align-items垂直居中 | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,214 +251,156 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      Um..! 5 posts in total. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/11/made-flex-box-height-center/" itemprop="url">
-              
-                <span itemprop="name">设置flex容器中的一个值使得align-items垂直居中</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-11T10:17:15+08:00"
-              content="2016-07-11" >
-          07-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/06/install-nodejs-in-ubuntu/" itemprop="url">
-              
-                <span itemprop="name">在ubuntu16.04下安装nodejs</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-06T22:34:10+08:00"
-              content="2016-07-06" >
-          07-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/06/css-margin-collapse/" itemprop="url">
-              
-                <span itemprop="name">如何解决margin塌陷(collapse)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-06T10:23:17+08:00"
-              content="2016-07-06" >
-          07-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/03/put-blog-in-a-subdirectory/" itemprop="url">
-              
-                <span itemprop="name">将hexo blog放在gitpage的子目录中</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-03T13:42:04+08:00"
-              content="2016-07-03" >
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2016/07/03/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-03T10:21:06+08:00"
-              content="2016-07-03" >
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                设置flex容器中的一个值使得align-items垂直居中
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-11T10:17:15+08:00" content="2016-07-11">
+              2016-07-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/07/11/made-flex-box-height-center/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/made-flex-box-height-center/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>目前实现全屏垂直居中最好的方式之一应该是CSS3中使用flex布局，设置父容器<code>body{display:flex;justify-content:center;align-items:center;}</code>然后再为其设置一个<code>{height:100%;width:100%;}</code>。但此时似乎并不奏效，元素仍然贴合在顶部。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>父元素高度没有被撑起。<br>查阅网上的解决方案，大部分回答都是要设置<code>html{height:100%;}body{height:100%;}</code>,有没有更简单的设置呢</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>设置父容器{min-height:100vh;}即可</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/flex/" rel="tag">#flex</a>
+          
+            <a href="/blog/tags/height/" rel="tag">#height</a>
+          
+            <a href="/blog/tags/center/" rel="tag">#center</a>
+          
+            <a href="/blog/tags/align-items/" rel="tag">#align-items</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/07/06/install-nodejs-in-ubuntu/" rel="next" title="在ubuntu16.04下安装nodejs">
+                <i class="fa fa-chevron-left"></i> 在ubuntu16.04下安装nodejs
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/11/made-flex-box-height-center/"
+     data-title="设置flex容器中的一个值使得align-items垂直居中"
+     data-content=""
+     data-url="http://laihaibo.github.io/blog/blog/2016/07/11/made-flex-box-height-center/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -462,6 +408,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/11/made-flex-box-height-center/"
+           data-title="设置flex容器中的一个值使得align-items垂直居中" data-url="http://laihaibo.github.io/blog/blog/2016/07/11/made-flex-box-height-center/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -481,8 +435,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/blog/images/avatar.gif"
@@ -545,6 +508,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">3.</span> <span class="nav-text">解决</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -641,11 +615,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   

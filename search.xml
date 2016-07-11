@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[设置flex容器中的一个值使得align-items垂直居中]]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/07/11/made-flex-box-height-center/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>目前实现全屏垂直居中最好的方式之一应该是CSS3中使用flex布局，设置父容器<code>body{display:flex;justify-content:center;align-items:center;}</code>然后再为其设置一个<code>{height:100%;width:100%;}</code>。但此时似乎并不奏效，元素仍然贴合在顶部。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>父元素高度没有被撑起。<br>查阅网上的解决方案，大部分回答都是要设置<code>html{height:100%;}body{height:100%;}</code>,有没有更简单的设置呢</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>设置父容器{min-height:100vh;}即可</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[在ubuntu16.04下安装nodejs]]></title>
       <url>http://laihaibo.github.io/blog/blog/2016/07/06/install-nodejs-in-ubuntu/</url>
       <content type="html"><![CDATA[<p>系统环境：ubuntu16.04<br>Nodejs版本：4.4.7<br>时间：2016.07.06</p>
