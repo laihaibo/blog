@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Blog of Lai Haibo">
 <meta property="og:description" content="今天在慕课网上的微博上看到一道题，[]，于是变也想试试通过按钮改变字体大小。">
 <meta property="og:image" content="http://ww4.sinaimg.cn/mw690/c5131475jw1f5z1firw9cj20n40i2dgu.jpg">
-<meta property="og:updated_time" content="2016-07-19T16:33:49.336Z">
+<meta property="og:updated_time" content="2016-07-20T05:23:29.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="获取元素字体大小及使用getComputedStyle">
 <meta name="twitter:description" content="今天在慕课网上的微博上看到一道题，[]，于是变也想试试通过按钮改变字体大小。">
@@ -322,6 +322,7 @@
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>由于不知道字体大小于是<code>word.style.fontSize = num + &#39;px&#39;;</code>结果出来，字体会先变小,然后再变大。想要字体直接变大，于是想通过<br><code>word.style.fontSize</code>获取word的字体大小，结果控制台出来结果为空。</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>通过搜索，发现了一个解决方案：<br><figure class="highlight plain"><figcaption><span>id="div" style="font-size: 12px;"></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var style = document.body.currentStyle || document.defaultView.getComputedStyle(document.body, &apos;&apos;)</div><div class="line">    console.log(style.fontSize);</div><div class="line">    var div = document.getElementById(&apos;div&apos;);</div><div class="line">    console.log(div.style.fontSize);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>发现了一个方法：<code>getComputedStyle</code>。这样用用：<code>document.defaultView.getComputedStyle(element, &#39;&#39;).fontSize</code>。得出一个带<code>px</code>的值，可以用<code>parsent</code>获得数值。<br>ie中可以用<code>document.body.currentStyle.fontSize</code></p>
+<p>function getStyle(element,wantstyle){<br>  var style= document.defaultView.getComputedStyle(element,””) || element.currentStyle;<br>  return style.wantstyle;<br>}</p>
 
       
     </div>
@@ -363,6 +364,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/07/21/Date-Object/" rel="prev" title="Date-Object">
+                Date-Object <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -453,7 +458,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -463,7 +468,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

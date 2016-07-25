@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ionic2,navigation,component," />
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="Web Front-End Blog by Lai Haibo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Lai Haibo">
-<meta property="og:url" content="http://laihaibo.github.io/blog/tags/hexo/index.html">
+<meta name="description" content="最近在学习用ionic2@beta32制作app，真是坑得眼泪都要流出来了。特别是这个navigation控件，官方文档是beta10版本，又看了多人不同版本的文档，再进行尝试，终于可以在两个页面之间传递数据了，本文谨做记录。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ionic2学习笔记之navigation组件">
+<meta property="og:url" content="http://laihaibo.github.io/blog/2016/07/25/ionic2-navigation/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="Web Front-End Blog by Lai Haibo">
+<meta property="og:description" content="最近在学习用ionic2@beta32制作app，真是坑得眼泪都要流出来了。特别是这个navigation控件，官方文档是beta10版本，又看了多人不同版本的文档，再进行尝试，终于可以在两个页面之间传递数据了，本文谨做记录。">
+<meta property="og:updated_time" content="2016-07-25T15:29:13.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Lai Haibo">
-<meta name="twitter:description" content="Web Front-End Blog by Lai Haibo">
+<meta name="twitter:title" content="ionic2学习笔记之navigation组件">
+<meta name="twitter:description" content="最近在学习用ionic2@beta32制作app，真是坑得眼泪都要流出来了。特别是这个navigation控件，官方文档是beta10版本，又看了多人不同版本的文档，再进行尝试，终于可以在两个页面之间传递数据了，本文谨做记录。">
 
 
 
@@ -113,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://laihaibo.github.io/blog/tags/hexo/"/>
+  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/07/25/ionic2-navigation/"/>
 
-  <title> Tag: hexo | Blog of Lai Haibo </title>
+  <title> ionic2学习笔记之navigation组件 | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,46 +248,156 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        hexo
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ionic2学习笔记之navigation组件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-25T23:09:25+08:00" content="2016-07-25">
+              2016-07-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/07/25/ionic2-navigation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/ionic2-navigation/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>最近在学习用ionic2@beta32制作app，真是坑得眼泪都要流出来了。特别是这个navigation控件，官方文档是beta10版本，又看了多人不同版本的文档，再进行尝试，终于可以在两个页面之间传递数据了，本文谨做记录。<br><a id="more"></a></p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>在contect.html中点击某个联系人，打开一个页面（contectDetals.html），显示该联系人的姓名和号码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;ion-content&gt;</div><div class="line">  &lt;ion-list&gt;</div><div class="line">    &lt;ion-list-header&gt;联系人&lt;/ion-list-header&gt;</div><div class="line">    &lt;ion-item *ngFor=&quot;let contact of contacts&quot; (click)=&quot;itemClick($event,contact)&quot;&gt;</div><div class="line">      &lt;ion-avatar item-left&gt;</div><div class="line">        &lt;img src=&quot;../images/&#123;&#123;contact.contactid&#125;&#125;.jpg&quot;&gt;</div><div class="line">      &lt;/ion-avatar&gt;</div><div class="line">      &lt;h2&gt;&#123;&#123;contact.contactname&#125;&#125;&lt;/h2&gt;</div><div class="line">      &lt;p&gt;&#123;&#123;contact.contacttext&#125;&#125;&lt;/p&gt;</div><div class="line">    &lt;/ion-item&gt;</div><div class="line">  &lt;/ion-list&gt;</div><div class="line">&lt;/ion-content&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>contact.ts中这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">import &#123;Component&#125; from &apos;@angular/core&apos;;</div><div class="line">import &#123;NavController,NavParams&#125; from &apos;ionic-angular&apos;;</div><div class="line">import &#123;ContactDetailsPage&#125; from &apos;../contact/contactdetails&apos;;</div><div class="line"></div><div class="line">@Component(&#123;</div><div class="line">  templateUrl: &apos;build/pages/contact/contact.html&apos;</div><div class="line">&#125;)</div><div class="line">export class ContactPage &#123;</div><div class="line">  contacts;</div><div class="line"></div><div class="line">  constructor(private navCtrl: NavController,params:NavParams) &#123;</div><div class="line"></div><div class="line">    this.navCtrl = navCtrl;</div><div class="line">    // 一般数据源都是从api获取，这里模拟一下</div><div class="line">    this.contacts = [</div><div class="line">      &#123;&quot;contactid&quot;:0,&quot;contactname&quot;:&quot;lhb&quot;,&quot;contacttext&quot;:&quot;18768101327&quot;&#125;,</div><div class="line">      &#123;&quot;contactid&quot;:1,&quot;contactname&quot;:&quot;lhh&quot;,&quot;contacttext&quot;:&quot;18768101328&quot;&#125;,</div><div class="line">      &#123;&quot;contactid&quot;:2,&quot;contactname&quot;:&quot;lbb&quot;,&quot;contacttext&quot;:&quot;18768101329&quot;&#125;,</div><div class="line">      &#123;&quot;contactid&quot;:3,&quot;contactname&quot;:&quot;hbl&quot;,&quot;contacttext&quot;:&quot;18768101320&quot;&#125;,</div><div class="line">      &#123;&quot;contactid&quot;:4,&quot;contactname&quot;:&quot;hhl&quot;,&quot;contacttext&quot;:&quot;18768101321&quot;&#125;,</div><div class="line">      &#123;&quot;contactid&quot;:5,&quot;contactname&quot;:&quot;bbl&quot;,&quot;contacttext&quot;:&quot;18768101322&quot;&#125;,</div><div class="line">      ];</div><div class="line">  &#125;</div><div class="line"></div><div class="line">    itemClick(event,contact)&#123;</div><div class="line">    // alert(contact.contactname);</div><div class="line">    //点击时候加载详情页</div><div class="line">    this.navCtrl.push(ContactDetailsPage,&#123;contact:contact&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>contactdetails.ts中可以这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import &#123;Component&#125; from &apos;@angular/core&apos;;</div><div class="line">import &#123;NavController,NavParams&#125; from &apos;ionic-angular&apos;;</div><div class="line"></div><div class="line">@Component(&#123;</div><div class="line">  templateUrl: &apos;build/pages/contact/contactdetails.html&apos;</div><div class="line">&#125;)</div><div class="line">export class ContactDetailsPage &#123;</div><div class="line">  contact;</div><div class="line">  constructor(private params: NavParams) &#123;</div><div class="line">    this.contact=params.data.contact;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>contactdetails.html中可以这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;ion-content padding&gt;</div><div class="line">    &#123;&#123;contact.contactname&#125;&#125;的手机号码是&#123;&#123;contact.contacttext&#125;&#125;</div><div class="line">&lt;/ion-content&gt;</div></pre></td></tr></table></figure></p>
+<p>学习过程中发现了官方文档的重要性，但也不是万能的。接下来要学习一下angular2的doc。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/blog/2016/07/03/put-blog-in-a-subdirectory/" itemprop="url">
-              
-                <span itemprop="name">将hexo blog放在gitpage的子目录中</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-03T13:42:04+08:00"
-              content="2016-07-03" >
-          07-03
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/ionic2/" rel="tag">#ionic2</a>
+          
+            <a href="/blog/tags/navigation/" rel="tag">#navigation</a>
+          
+            <a href="/blog/tags/component/" rel="tag">#component</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/07/21/Date-Object/" rel="next" title="Date-Object">
+                <i class="fa fa-chevron-left"></i> Date-Object
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/25/ionic2-navigation/"
+     data-title="ionic2学习笔记之navigation组件"
+     data-content=""
+     data-url="http://laihaibo.github.io/blog/blog/2016/07/25/ionic2-navigation/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -294,6 +405,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/25/ionic2-navigation/"
+           data-title="ionic2学习笔记之navigation组件" data-url="http://laihaibo.github.io/blog/blog/2016/07/25/ionic2-navigation/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -313,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/blog/images/avatar.gif"
@@ -377,6 +505,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -473,6 +612,10 @@
   
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
