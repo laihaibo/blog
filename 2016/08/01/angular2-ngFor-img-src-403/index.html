@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="angular2,ngFor," />
 
 
 
@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="Web Front-End Blog by Lai Haibo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Lai Haibo">
-<meta property="og:url" content="http://laihaibo.github.io/blog/tags/style/index.html">
+<meta name="description" content="最近想用ionic2复刻一个知乎日报的app。
+问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。
+12&amp;lt;img src=&amp;quot;&amp;#123;&amp;#123;story.images&amp;#125;&amp;#125;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;//story.images=http://pic4.zhimg.com/34d5241372">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法">
+<meta property="og:url" content="http://laihaibo.github.io/blog/2016/08/01/angular2-ngFor-img-src-403/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="Web Front-End Blog by Lai Haibo">
+<meta property="og:description" content="最近想用ionic2复刻一个知乎日报的app。
+问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。
+12&amp;lt;img src=&amp;quot;&amp;#123;&amp;#123;story.images&amp;#125;&amp;#125;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;//story.images=http://pic4.zhimg.com/34d5241372">
+<meta property="og:updated_time" content="2016-08-01T16:12:10.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Lai Haibo">
-<meta name="twitter:description" content="Web Front-End Blog by Lai Haibo">
+<meta name="twitter:title" content="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法">
+<meta name="twitter:description" content="最近想用ionic2复刻一个知乎日报的app。
+问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。
+12&amp;lt;img src=&amp;quot;&amp;#123;&amp;#123;story.images&amp;#125;&amp;#125;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;//story.images=http://pic4.zhimg.com/34d5241372">
 
 
 
@@ -113,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://laihaibo.github.io/blog/tags/style/"/>
+  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/08/01/angular2-ngFor-img-src-403/"/>
 
-  <title> Tag: style | Blog of Lai Haibo </title>
+  <title> angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法 | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +143,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,46 +254,157 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        style
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-01T23:35:59+08:00" content="2016-08-01">
+              2016-08-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/08/01/angular2-ngFor-img-src-403/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/01/angular2-ngFor-img-src-403/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>最近想用ionic2复刻一个知乎日报的app。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;&#123;&#123;story.images&#125;&#125;&quot; alt=&quot;&quot;&gt;</div><div class="line">//story.images=http://pic4.zhimg.com/34d5241372196fb08a2cb620c3f554b8.jpg</div></pre></td></tr></table></figure>
+<p>得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET http://localhost:8100/pic4.zhimg.com/34d5241372196fb08a2cb620c3f554b8.jpg 404 (Not Found)</div></pre></td></tr></table></figure></p>
+<p>而且文件的type是text/html，不是想要的image/jpeg</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>查看了很多angular2这类问题，看了angular2的模板，但是都没有看到一个解决方法，此时看到另一个用vue复刻知乎日报作者的写法是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://images.weserv.nl/?url=pic3.zhimg.com/f5bf405f11a03c129c88f064aae142fe.jpg</div></pre></td></tr></table></figure></p>
+<p>打开看了一下<a href="https://images.weserv.nl，似乎是一个图片缓存网站。搞不清原理，于是我先试了一下，写作" target="_blank" rel="external">https://images.weserv.nl，似乎是一个图片缓存网站。搞不清原理，于是我先试了一下，写作</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;//images.weserv.nl/?url=&#123;&#123;story.images&#125;&#125;&quot; alt=&quot;&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>没想到顺利解决，至于原理，慢慢搞清。</p>
+<h2 id="另一个解决办法"><a href="#另一个解决办法" class="headerlink" title="另一个解决办法"></a>另一个解决办法</h2><p>使用sqlite存储图片为二进制文件到本地</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/blog/2016/07/20/get-fontSize/" itemprop="url">
-              
-                <span itemprop="name">获取元素字体大小及使用getComputedStyle</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-20T00:19:23+08:00"
-              content="2016-07-20" >
-          07-20
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/angular2/" rel="tag">#angular2</a>
+          
+            <a href="/blog/tags/ngFor/" rel="tag">#ngFor</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/07/26/国家省市三级联动select/" rel="next" title="'国家省市三级联动select'">
+                <i class="fa fa-chevron-left"></i> '国家省市三级联动select'
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/08/01/angular2-ngFor-img-src-403/"
+     data-title="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法"
+     data-content=""
+     data-url="http://laihaibo.github.io/blog/blog/2016/08/01/angular2-ngFor-img-src-403/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -294,6 +412,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/01/angular2-ngFor-img-src-403/"
+           data-title="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法" data-url="http://laihaibo.github.io/blog/blog/2016/08/01/angular2-ngFor-img-src-403/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -313,8 +439,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/blog/images/avatar.gif"
@@ -377,6 +512,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#另一个解决办法"><span class="nav-number">3.</span> <span class="nav-text">另一个解决办法</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -473,6 +619,10 @@
   
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
