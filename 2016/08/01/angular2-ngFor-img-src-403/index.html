@@ -85,21 +85,18 @@
 
 
 <meta name="description" content="最近想用ionic2复刻一个知乎日报的app。
-问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。
-12&amp;lt;img src=&amp;quot;&amp;#123;&amp;#123;story.images&amp;#125;&amp;#125;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;//story.images=http://pic4.zhimg.com/34d5241372">
+问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法">
 <meta property="og:url" content="http://laihaibo.github.io/blog/2016/08/01/angular2-ngFor-img-src-403/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
 <meta property="og:description" content="最近想用ionic2复刻一个知乎日报的app。
-问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。
-12&amp;lt;img src=&amp;quot;&amp;#123;&amp;#123;story.images&amp;#125;&amp;#125;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;//story.images=http://pic4.zhimg.com/34d5241372">
-<meta property="og:updated_time" content="2016-08-01T16:12:10.518Z">
+问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。">
+<meta property="og:updated_time" content="2016-08-13T15:36:53.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法">
 <meta name="twitter:description" content="最近想用ionic2复刻一个知乎日报的app。
-问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。
-12&amp;lt;img src=&amp;quot;&amp;#123;&amp;#123;story.images&amp;#125;&amp;#125;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;//story.images=http://pic4.zhimg.com/34d5241372">
+问题在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。">
 
 
 
@@ -323,8 +320,7 @@
 
       
         <p>最近想用ionic2复刻一个知乎日报的app。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;&#123;&#123;story.images&#125;&#125;&quot; alt=&quot;&quot;&gt;</div><div class="line">//story.images=http://pic4.zhimg.com/34d5241372196fb08a2cb620c3f554b8.jpg</div></pre></td></tr></table></figure>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在测试时候发现一个错误，在img使用src绑定模板的url链接时，访问得到403错误。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;&#123;&#123;story.images&#125;&#125;&quot; alt=&quot;&quot;&gt;</div><div class="line">//story.images=http://pic4.zhimg.com/34d5241372196fb08a2cb620c3f554b8.jpg</div></pre></td></tr></table></figure></p>
 <p>得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET http://localhost:8100/pic4.zhimg.com/34d5241372196fb08a2cb620c3f554b8.jpg 404 (Not Found)</div></pre></td></tr></table></figure></p>
 <p>而且文件的type是text/html，不是想要的image/jpeg</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>查看了很多angular2这类问题，看了angular2的模板，但是都没有看到一个解决方法，此时看到另一个用vue复刻知乎日报作者的写法是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://images.weserv.nl/?url=pic3.zhimg.com/f5bf405f11a03c129c88f064aae142fe.jpg</div></pre></td></tr></table></figure></p>
@@ -464,7 +460,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -474,7 +470,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

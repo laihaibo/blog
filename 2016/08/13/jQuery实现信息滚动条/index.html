@@ -85,21 +85,18 @@
 
 
 <meta name="description" content="做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。
-实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。
-问题append的操作优先于slideUp，所以想象中的slideUp–">
+实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="'jQuery实现信息滚动条'">
 <meta property="og:url" content="http://laihaibo.github.io/blog/2016/08/13/jQuery实现信息滚动条/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
 <meta property="og:description" content="做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。
-实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。
-问题append的操作优先于slideUp，所以想象中的slideUp–">
-<meta property="og:updated_time" content="2016-08-13T15:21:47.343Z">
+实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。">
+<meta property="og:updated_time" content="2016-08-13T15:37:05.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="'jQuery实现信息滚动条'">
 <meta name="twitter:description" content="做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。
-实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。
-问题append的操作优先于slideUp，所以想象中的slideUp–">
+实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。">
 
 
 
@@ -323,7 +320,7 @@
 
       
         <p>做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。</p>
-<h2 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h2><p>通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。</p>
+<h2 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h2><p>通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。<br><a id="more"></a></p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>append的操作优先于slideUp，所以想象中的slideUp–&gt;append–&gt; slideDown，会变成append–&gt;slideUp–&gt; slideDown。</p>
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><blockquote>
 <p>when you are using methods that animate content, those animations are added to what is called a queue, specifically the “fx” queue. normal jquery methods, such as prependTo(), are not added to the “fx” queue, therefore they get executed immediately instead of waiting till the previously added item in the queue is executed.</p>
@@ -377,6 +374,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/08/13/audio动画/" rel="prev" title="'实现audio的暂停，播放，离开页面暂停功能''">
+                '实现audio的暂停，播放，离开页面暂停功能'' <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -467,7 +468,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -477,7 +478,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
