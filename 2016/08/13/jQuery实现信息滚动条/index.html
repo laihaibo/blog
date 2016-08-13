@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ubuntu,nodejs," />
+  <meta name="keywords" content="jquery,信息滚动条,queue," />
 
 
 
@@ -84,19 +84,22 @@
 
 
 
-<meta name="description" content="系统环境：ubuntu16.04Nodejs版本：4.4.7时间：2016.07.06
-由于通过sudo apt-get install nodejs命令下载的node版本过旧，">
+<meta name="description" content="做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。
+实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。
+问题append的操作优先于slideUp，所以想象中的slideUp–">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在ubuntu16.04下安装nodejs">
-<meta property="og:url" content="http://laihaibo.github.io/blog/2016/07/06/install-nodejs-in-ubuntu/index.html">
+<meta property="og:title" content="'jQuery实现信息滚动条'">
+<meta property="og:url" content="http://laihaibo.github.io/blog/2016/08/13/jQuery实现信息滚动条/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="系统环境：ubuntu16.04Nodejs版本：4.4.7时间：2016.07.06
-由于通过sudo apt-get install nodejs命令下载的node版本过旧，">
-<meta property="og:updated_time" content="2016-07-06T15:09:01.520Z">
+<meta property="og:description" content="做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。
+实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。
+问题append的操作优先于slideUp，所以想象中的slideUp–">
+<meta property="og:updated_time" content="2016-08-13T15:21:47.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在ubuntu16.04下安装nodejs">
-<meta name="twitter:description" content="系统环境：ubuntu16.04Nodejs版本：4.4.7时间：2016.07.06
-由于通过sudo apt-get install nodejs命令下载的node版本过旧，">
+<meta name="twitter:title" content="'jQuery实现信息滚动条'">
+<meta name="twitter:description" content="做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。
+实现方案通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。
+问题append的操作优先于slideUp，所以想象中的slideUp–">
 
 
 
@@ -117,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/07/06/install-nodejs-in-ubuntu/"/>
+  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/08/13/jQuery实现信息滚动条/"/>
 
-  <title> 在ubuntu16.04下安装nodejs | Blog of Lai Haibo </title>
+  <title> 'jQuery实现信息滚动条' | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -272,7 +275,7 @@
             
             
               
-                在ubuntu16.04下安装nodejs
+                'jQuery实现信息滚动条'
               
             
           </h1>
@@ -284,8 +287,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-06T22:34:10+08:00" content="2016-07-06">
-              2016-07-06
+            <time itemprop="dateCreated" datetime="2016-08-13T23:03:50+08:00" content="2016-08-13">
+              2016-08-13
             </time>
           </span>
 
@@ -295,8 +298,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/blog/2016/07/06/install-nodejs-in-ubuntu/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/06/install-nodejs-in-ubuntu/" itemprop="commentsCount"></span>
+                <a href="/blog/2016/08/13/jQuery实现信息滚动条/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/13/jQuery实现信息滚动条/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -319,19 +322,20 @@
       
 
       
-        <p>系统环境：ubuntu16.04<br>Nodejs版本：4.4.7<br>时间：2016.07.06</p>
-<p>由于通过<code>sudo apt-get install nodejs</code>命令下载的node版本过旧，<a id="more"></a>根据nodejs官方的提供的解决方案（<a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions）" target="_blank" rel="external">https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions）</a></p>
-<blockquote>
-<p>Debian and Ubuntu based Linux distributions</p>
+        <p>做了一个响应式的互联网金融网站，基本上该有的功能都有了，想还想去，应该还要添加一个信息滚动条功能，来循环播出最新公告。因为之前已经采用过JQuery插件，于是就用Jquery实现dom操作。</p>
+<h2 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h2><p>通过JQuery的slideUp方法将ul的第一个li隐藏，然后将此li append到ul的末尾，再slideDown出来。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>append的操作优先于slideUp，所以想象中的slideUp–&gt;append–&gt; slideDown，会变成append–&gt;slideUp–&gt; slideDown。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><blockquote>
+<p>when you are using methods that animate content, those animations are added to what is called a queue, specifically the “fx” queue. normal jquery methods, such as prependTo(), are not added to the “fx” queue, therefore they get executed immediately instead of waiting till the previously added item in the queue is executed.</p>
 </blockquote>
-<p>可以通过在终端输入以下命令来安装最新版本的nodejs：<br>(ubuntu官方建议在ubuntu 16.04中使用apt命令，即用<code>apt install</code>代替<code>apt-get install</code>。而且apt命令还有一个特点，就是可以直接在终端中显示进度条并高亮一些信息)</p>
-<ul>
-<li><code>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</code>(长期支持版本v4，二选一)</li>
-<li><code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code>（最新版本v6，二选一）</li>
-<li><code>sudo apt install -y nodejs</code><br>然后下载一个编译工具，用于从npm编译安装附加组件</li>
-<li><code>sudo apt install -y build-essential</code></li>
-</ul>
-<p>安装完成后可以查看nodejs与npm版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">:~$ node -v</div><div class="line">v4.4.7</div><div class="line">:~$ npm -v</div><div class="line">2.15.8</div></pre></td></tr></table></figure></p>
+<p>append方法会先于动画函数的队列执行</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li>delay 方法<br> 可以设置一个延迟，但是时间很难掌握，于是采用queue方案</li>
+<li>queue 方法</li>
+</ol>
+<h2 id="最终实现"><a href="#最终实现" class="headerlink" title="最终实现"></a>最终实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var $logs = $(&apos;#logs&apos;);</div><div class="line">    //设置定时器</div><div class="line">    var timer;</div><div class="line">    var speed =50;</div><div class="line">    var daly=2000;</div><div class="line"></div><div class="line">    function start()&#123;</div><div class="line">      $(&apos;#logs li:first&apos;).slideUp().queue(function(next)&#123;</div><div class="line">        //将append操作插入到动画队列中</div><div class="line">        $(this).appendTo($logs);</div><div class="line">        next();</div><div class="line">      &#125;).slideDown();</div><div class="line">      timer = setInterval(scroll,speed);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    function scroll()&#123;</div><div class="line">      clearInterval(timer);</div><div class="line">      setTimeout(start,daly);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //初始化，延迟2s开始播放</div><div class="line">    setTimeout(start,daly);</div></pre></td></tr></table></figure>
+<p>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&quot;logs&quot;&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 1&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 2&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 3&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 4&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 5&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 6&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 7&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;This is log 8&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
+<p>css<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  font-size: 16px;</div><div class="line">&#125;</div><div class="line">ul &#123;</div><div class="line">    /*height: 1.4rem;*/</div><div class="line">    overflow: hidden;</div><div class="line">  &#125;</div><div class="line">li&#123;</div><div class="line">    /*height: 1.1rem;*/</div><div class="line">  &#125;</div><div class="line">a&#123;</div><div class="line">    line-height: 1.4rem;</div><div class="line">    height: 1.4rem;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -353,9 +357,11 @@
       
         <div class="post-tags">
           
-            <a href="/blog/tags/ubuntu/" rel="tag">#ubuntu</a>
+            <a href="/blog/tags/jquery/" rel="tag">#jquery</a>
           
-            <a href="/blog/tags/nodejs/" rel="tag">#nodejs</a>
+            <a href="/blog/tags/信息滚动条/" rel="tag">#信息滚动条</a>
+          
+            <a href="/blog/tags/queue/" rel="tag">#queue</a>
           
         </div>
       
@@ -364,17 +370,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2016/07/06/css-margin-collapse/" rel="next" title="如何解决margin塌陷(collapse)">
-                <i class="fa fa-chevron-left"></i> 如何解决margin塌陷(collapse)
+              <a href="/blog/2016/08/01/angular2-ngFor-img-src-403/" rel="next" title="angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法">
+                <i class="fa fa-chevron-left"></i> angular2中使用模板ngFor方法时绑定img的src属性产生403错误的解决办法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2016/07/11/made-flex-box-height-center/" rel="prev" title="设置flex容器中的一个值使得align-items垂直居中">
-                设置flex容器中的一个值使得align-items垂直居中 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -389,10 +391,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/06/install-nodejs-in-ubuntu/"
-     data-title="在ubuntu16.04下安装nodejs"
+        <div class="ds-share flat" data-thread-key="2016/08/13/jQuery实现信息滚动条/"
+     data-title="'jQuery实现信息滚动条'"
      data-content=""
-     data-url="http://laihaibo.github.io/blog/blog/2016/07/06/install-nodejs-in-ubuntu/">
+     data-url="http://laihaibo.github.io/blog/blog/2016/08/13/jQuery实现信息滚动条/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -419,8 +421,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/06/install-nodejs-in-ubuntu/"
-           data-title="在ubuntu16.04下安装nodejs" data-url="http://laihaibo.github.io/blog/blog/2016/07/06/install-nodejs-in-ubuntu/">
+      <div class="ds-thread" data-thread-key="2016/08/13/jQuery实现信息滚动条/"
+           data-title="'jQuery实现信息滚动条'" data-url="http://laihaibo.github.io/blog/blog/2016/08/13/jQuery实现信息滚动条/">
       </div>
     
   </div>
@@ -524,7 +526,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现方案"><span class="nav-number">1.</span> <span class="nav-text">实现方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">3.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最终实现"><span class="nav-number">5.</span> <span class="nav-text">最终实现</span></a></li></ol></div>
             
           </div>
         </section>
