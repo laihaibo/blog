@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="js实现快速排序和冒泡排序
-快速排序1234567891011121314151617181920var qsort = function f(arr) &amp;#123;  let l = arr.length;  if (l &amp;lt;= 1) &amp;#123;    return arr;  &amp;#125;  let base = arr.shift(); // 这里shift后调用这个方法的arr就会少">
+<meta name="description" content="js实现快速排序和冒泡排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="'排序'">
+<meta property="og:title" content="排序">
 <meta property="og:url" content="http://laihaibo.github.io/blog/2016/07/18/排序/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="js实现快速排序和冒泡排序
-快速排序1234567891011121314151617181920var qsort = function f(arr) &amp;#123;  let l = arr.length;  if (l &amp;lt;= 1) &amp;#123;    return arr;  &amp;#125;  let base = arr.shift(); // 这里shift后调用这个方法的arr就会少">
-<meta property="og:updated_time" content="2016-08-17T16:55:30.572Z">
+<meta property="og:description" content="js实现快速排序和冒泡排序">
+<meta property="og:updated_time" content="2016-08-17T17:00:57.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="'排序'">
-<meta name="twitter:description" content="js实现快速排序和冒泡排序
-快速排序1234567891011121314151617181920var qsort = function f(arr) &amp;#123;  let l = arr.length;  if (l &amp;lt;= 1) &amp;#123;    return arr;  &amp;#125;  let base = arr.shift(); // 这里shift后调用这个方法的arr就会少">
+<meta name="twitter:title" content="排序">
+<meta name="twitter:description" content="js实现快速排序和冒泡排序">
 
 
 
@@ -119,7 +116,7 @@
 
   <link rel="canonical" href="http://laihaibo.github.io/blog/2016/07/18/排序/"/>
 
-  <title> '排序' | Blog of Lai Haibo </title>
+  <title> 排序 | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -272,7 +269,7 @@
             
             
               
-                '排序'
+                排序
               
             
           </h1>
@@ -319,8 +316,7 @@
       
 
       
-        <p>js实现快速排序和冒泡排序</p>
-<p>快速排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var qsort = function f(arr) &#123;</div><div class="line">  let l = arr.length;</div><div class="line">  if (l &lt;= 1) &#123;</div><div class="line">    return arr;</div><div class="line">  &#125;</div><div class="line">  let base = arr.shift(); // 这里shift后调用这个方法的arr就会少掉arr[0]</div><div class="line">  let left = [],</div><div class="line">    right = [];</div><div class="line">  left = arr.filter(function(item, index, array) &#123;</div><div class="line">    return (item &lt; base);</div><div class="line">  &#125;);</div><div class="line">  right = arr.filter(function(item, index, array) &#123;</div><div class="line">    return (item &gt;= base);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  return f(left).concat([base], f(right));</div><div class="line">&#125;</div><div class="line">var arrq = [374385, 32423, 2313, 54436, 3243, 8, 5, 23423];</div><div class="line">document.write(qsort(arrq) + &apos;&lt;br&gt;&apos;);</div><div class="line">console.log(arrq);//原数组失去arr[0]，顺序未改变</div></pre></td></tr></table></figure></p>
+        <p>js实现快速排序和冒泡排序<br><a id="more"></a><br>快速排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var qsort = function f(arr) &#123;</div><div class="line">  let l = arr.length;</div><div class="line">  if (l &lt;= 1) &#123;</div><div class="line">    return arr;</div><div class="line">  &#125;</div><div class="line">  let base = arr.shift(); // 这里shift后调用这个方法的arr就会少掉arr[0]</div><div class="line">  let left = [],</div><div class="line">    right = [];</div><div class="line">  left = arr.filter(function(item, index, array) &#123;</div><div class="line">    return (item &lt; base);</div><div class="line">  &#125;);</div><div class="line">  right = arr.filter(function(item, index, array) &#123;</div><div class="line">    return (item &gt;= base);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  return f(left).concat([base], f(right));</div><div class="line">&#125;</div><div class="line">var arrq = [374385, 32423, 2313, 54436, 3243, 8, 5, 23423];</div><div class="line">document.write(qsort(arrq) + &apos;&lt;br&gt;&apos;);</div><div class="line">console.log(arrq);//原数组失去arr[0]，顺序未改变</div></pre></td></tr></table></figure></p>
 <p>冒泡排序</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var bsort = function f(arr) &#123;</div><div class="line">            let l = arr.length;</div><div class="line">            if (l &lt;= 1) &#123;</div><div class="line">              return arr;</div><div class="line">            &#125;</div><div class="line">            let left = [];</div><div class="line">            for (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">              for (var j = i + 1; j &lt; arr.length; j++) &#123;</div><div class="line">                if (arr[i] &gt; arr[j]) &#123;</div><div class="line">                  let temp = arr[i];</div><div class="line">                  arr[i] = arr[j];</div><div class="line">                  arr[j] = temp;</div><div class="line">                &#125;</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">            return arr;</div><div class="line">          &#125;</div><div class="line">          var arrb = [374385, 32423, 2313, 54436, 3243, 8, 5, 23423];</div><div class="line">          document.write(bsort(arrb));</div><div class="line">          console.log(arrb); //原数组已经排好序</div></pre></td></tr></table></figure>
       
@@ -382,7 +378,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/07/18/排序/"
-     data-title="'排序'"
+     data-title="排序"
      data-content=""
      data-url="http://laihaibo.github.io/blog/blog/2016/07/18/排序/">
   <div class="ds-share-inline">
@@ -412,7 +408,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/07/18/排序/"
-           data-title="'排序'" data-url="http://laihaibo.github.io/blog/blog/2016/07/18/排序/">
+           data-title="排序" data-url="http://laihaibo.github.io/blog/blog/2016/07/18/排序/">
       </div>
     
   </div>
@@ -457,7 +453,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
