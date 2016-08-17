@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title><![CDATA['quicksort]]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/08/18/quicksort/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA['css3之selector辨析']]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/08/17/css3%E4%B9%8Bselector%E8%BE%A8%E6%9E%90/</url>
+      <content type="html"><![CDATA[<p>关于css3选择器的一些使用方法</p>
+<h3 id="not-选择器"><a href="#not-选择器" class="headerlink" title=":not()选择器"></a>:not()选择器</h3><p>demo、用来去除导航末尾的边框</p>
+<p>nav li:not(:last-child){<br>    border-right:1px solid #666;<br>}</p>
+<h3 id="x-y选择器"><a href="#x-y选择器" class="headerlink" title="x + y选择器"></a>x + y选择器</h3><p>匹配所有紧随x的y兄弟元素，直到遇到其他元素为止，若xy相同则不会匹配第一个元素</p>
+<p>demo、可以实现上面的效果</p>
+<p>nav li+li{<br>    border-left:1px solid #666;<br>}</p>
+<h3 id="x-y选择器-1"><a href="#x-y选择器-1" class="headerlink" title="x ~ y选择器"></a>x ~ y选择器</h3><p>匹配所有x之后的所有y元素，若xy相同则不会匹配第一个元素</p>
+<h3 id="x-last-child"><a href="#x-last-child" class="headerlink" title="x:last-child"></a>x:last-child</h3><p>匹配父元素中最后一个x子元素，若最后一个子元素不是x，则不生效，即最后一个元素和最后一个x元素皆不发生变化</p>
+<h3 id="x-last-of-type"><a href="#x-last-of-type" class="headerlink" title="x:last-of-type"></a>x:last-of-type</h3><p>匹配父元素中最后一个x子元素，若子元素不是x，即最后一个x元素发生变化</p>
+<h3 id="after和-after"><a href="#after和-after" class="headerlink" title=":after和::after"></a>:after和::after</h3><blockquote>
+<p>CSS伪元素::after用来匹配已选中元素的一个虚拟的最后子元素.通常会配合content属性来为该元素添加装饰内容.这个虚拟元素默认是行内元素</p>
+</blockquote>
+<p>css3中，为了区分伪类(:)和伪元素(::)。:after和::after作用相同，:after是为了兼容早前的浏览器</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA['实现audio的暂停，播放，离开页面暂停功能'']]></title>
       <url>http://laihaibo.github.io/blog/blog/2016/08/13/audio%E5%8A%A8%E7%94%BB/</url>
       <content type="html"><![CDATA[<p>用jquery实现audio的暂停，播放，离开页面暂停功能<br><a id="more"></a><br>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;music&quot; class=&quot;play&quot;&gt;</div><div class="line">    &lt;audio loop=&quot;loop&quot; id=&quot;maudio&quot; autoplay=&quot;autoplay&quot;&gt;</div><div class="line">        &lt;source  src=&quot;./src/Crazy%20Bird.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</div><div class="line">        你的浏览器不支持audio！</div><div class="line">    &lt;/audio&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
@@ -82,6 +107,15 @@
 <p>发现了一个方法：<code>getComputedStyle</code>。这样用用：<code>document.defaultView.getComputedStyle(element, &#39;&#39;).fontSize</code>。得出一个带<code>px</code>的值，可以用<code>parsent</code>获得数值。<br>ie中可以用<code>document.body.currentStyle.fontSize</code></p>
 <p>function getStyle(element,wantstyle){<br>  var style= document.defaultView.getComputedStyle(element,””) || element.currentStyle;<br>  return style.wantstyle;<br>}</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA['排序']]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/07/18/%E6%8E%92%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<p>js实现快速排序和冒泡排序</p>
+<p>快速排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var qsort = function f(arr) &#123;</div><div class="line">  let l = arr.length;</div><div class="line">  if (l &lt;= 1) &#123;</div><div class="line">    return arr;</div><div class="line">  &#125;</div><div class="line">  let base = arr.shift(); // 这里shift后调用这个方法的arr就会少掉arr[0]</div><div class="line">  let left = [],</div><div class="line">    right = [];</div><div class="line">  left = arr.filter(function(item, index, array) &#123;</div><div class="line">    return (item &lt; base);</div><div class="line">  &#125;);</div><div class="line">  right = arr.filter(function(item, index, array) &#123;</div><div class="line">    return (item &gt;= base);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  return f(left).concat([base], f(right));</div><div class="line">&#125;</div><div class="line">var arrq = [374385, 32423, 2313, 54436, 3243, 8, 5, 23423];</div><div class="line">document.write(qsort(arrq) + &apos;&lt;br&gt;&apos;);</div><div class="line">console.log(arrq);//原数组失去arr[0]，顺序未改变</div></pre></td></tr></table></figure></p>
+<p>冒泡排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var bsort = function f(arr) &#123;</div><div class="line">            let l = arr.length;</div><div class="line">            if (l &lt;= 1) &#123;</div><div class="line">              return arr;</div><div class="line">            &#125;</div><div class="line">            let left = [];</div><div class="line">            for (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">              for (var j = i + 1; j &lt; arr.length; j++) &#123;</div><div class="line">                if (arr[i] &gt; arr[j]) &#123;</div><div class="line">                  let temp = arr[i];</div><div class="line">                  arr[i] = arr[j];</div><div class="line">                  arr[j] = temp;</div><div class="line">                &#125;</div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">            return arr;</div><div class="line">          &#125;</div><div class="line">          var arrb = [374385, 32423, 2313, 54436, 3243, 8, 5, 23423];</div><div class="line">          document.write(bsort(arrb));</div><div class="line">          console.log(arrb); //原数组已经排好序</div></pre></td></tr></table></figure>]]></content>
     </entry>
     
     <entry>
@@ -176,6 +210,37 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA['es6中的循环与闭包--《你不知道的JavaScript》读书笔记']]></title>
+      <url>http://laihaibo.github.io/blog/blog/2016/05/17/es6%E4%B8%AD%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%B8%8E%E9%97%AD%E5%8C%85/</url>
+      <content type="html"><![CDATA[<p>今天重新读了一遍《你不知道的JavaScript》，发现了一个经典的闭包循环问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i=0;i&lt;5;i++)&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            document.write(i+&apos;\n&apos;);</div><div class="line">        &#125;,100);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码输出的结果是<code>5 5 5 5 5</code>而不是想象中的<code>0 1 2 3 4 5</code>。</p>
+<h2 id="why？"><a href="#why？" class="headerlink" title="why？"></a>why？</h2><p>javascript是单线程语言，setTimeout函数会延迟执行，而此时for循环已经结束。因而此段代码等同于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">setTimeout(function()&#123;</div><div class="line">    document.write(5+&apos;\n&apos;);</div><div class="line">&#125;,100);</div><div class="line">//再执行4次</div></pre></td></tr></table></figure></p>
+<h2 id="How-to-slove"><a href="#How-to-slove" class="headerlink" title="How to slove ?"></a>How to slove ?</h2><p>让每个setTimeout都有一个对不同i的引用。换言之在每个循环里执行一次setTimeout函数。</p>
+<ol>
+<li><p>立即执行函数（IIFE）：  </p>
+<blockquote>
+<p>在迭代器里使用IIFE会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的作用域封闭在每个迭代内部，每个迭代中都会含有一个具有正确值的变量供我们使用。</p>
+</blockquote>
+</li>
+<li><p>es6块作用域：</p>
+<blockquote>
+<p>let声明可以劫持块作用域（将一个块变成一个可被关闭的作用域），并且在这个块作用域中声明一个变量，而且每个迭代都会使用上一个迭代结束是的值来初始化这个变量</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="How-to-do-？"><a href="#How-to-do-？" class="headerlink" title="How to do ？"></a>How to do ？</h2><ol>
+<li>立即执行函数（IIFE）：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(var i=0;i&lt;5;i++)&#123;</div><div class="line">    (function(i)&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            document.write(i+&apos;\n&apos;);</div><div class="line">        &#125;,100);</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>es6块作用域：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(let i=0;i&lt;5;i++)&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            document.write(i+&apos;\n&apos;);</div><div class="line">        &#125;,100);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="FIN"><a href="#FIN" class="headerlink" title="FIN"></a>FIN</h2><p>怎么样，有够简单吧</p>
 ]]></content>
     </entry>
     
