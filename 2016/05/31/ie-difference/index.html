@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ie,difference," />
 
 
 
@@ -84,15 +84,67 @@
 
 
 
-<meta name="description" content="Web Front-End Blog by Lai Haibo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Lai Haibo">
-<meta property="og:url" content="http://laihaibo.github.io/blog/tags/selector/index.html">
+<meta name="description" content="event
+ie: window.event
+其他: event
+
+阻止冒泡
+ie:   e.cancelBubble=true
+其他:   e.stopPropagation()
+
+阻止默认事件
+ie:   e.returnValue=false
+其他:   e.preventDefault()
+
+事件目标
+ie:e.srcElement
+其他:e.target
+
+绑定/解除事件
+ie:ele">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ie和其他浏览器的差异">
+<meta property="og:url" content="http://laihaibo.github.io/blog/2016/05/31/ie-difference/index.html">
 <meta property="og:site_name" content="Blog of Lai Haibo">
-<meta property="og:description" content="Web Front-End Blog by Lai Haibo">
+<meta property="og:description" content="event
+ie: window.event
+其他: event
+
+阻止冒泡
+ie:   e.cancelBubble=true
+其他:   e.stopPropagation()
+
+阻止默认事件
+ie:   e.returnValue=false
+其他:   e.preventDefault()
+
+事件目标
+ie:e.srcElement
+其他:e.target
+
+绑定/解除事件
+ie:ele">
+<meta property="og:updated_time" content="2016-08-31T08:06:49.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Lai Haibo">
-<meta name="twitter:description" content="Web Front-End Blog by Lai Haibo">
+<meta name="twitter:title" content="ie和其他浏览器的差异">
+<meta name="twitter:description" content="event
+ie: window.event
+其他: event
+
+阻止冒泡
+ie:   e.cancelBubble=true
+其他:   e.stopPropagation()
+
+阻止默认事件
+ie:   e.returnValue=false
+其他:   e.preventDefault()
+
+事件目标
+ie:e.srcElement
+其他:e.target
+
+绑定/解除事件
+ie:ele">
 
 
 
@@ -113,9 +165,9 @@
 
 
 
-  <link rel="canonical" href="http://laihaibo.github.io/blog/tags/selector/"/>
+  <link rel="canonical" href="http://laihaibo.github.io/blog/2016/05/31/ie-difference/"/>
 
-  <title> Tag: selector | Blog of Lai Haibo </title>
+  <title> ie和其他浏览器的差异 | Blog of Lai Haibo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +188,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,46 +299,181 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        selector
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ie和其他浏览器的差异
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T15:44:40+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/05/31/ie-difference/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/ie-difference/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <a id="more"></a>
+<h3 id="event"><a href="#event" class="headerlink" title="event"></a>event</h3><ul>
+<li>ie: <code>window.event</code></li>
+<li>其他: <code>event</code></li>
+</ul>
+<h3 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡"></a>阻止冒泡</h3><ul>
+<li>ie:   <code>e.cancelBubble=true</code></li>
+<li>其他:   <code>e.stopPropagation()</code></li>
+</ul>
+<h3 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h3><ul>
+<li>ie:   <code>e.returnValue=false</code></li>
+<li>其他:   <code>e.preventDefault()</code></li>
+</ul>
+<h3 id="事件目标"><a href="#事件目标" class="headerlink" title="事件目标"></a>事件目标</h3><ul>
+<li>ie:<code>e.srcElement</code></li>
+<li>其他:<code>e.target</code></li>
+</ul>
+<h3 id="绑定-解除事件"><a href="#绑定-解除事件" class="headerlink" title="绑定/解除事件"></a>绑定/解除事件</h3><ul>
+<li>ie:<code>element.attachEvent(&#39;on&#39;+type,handler)</code>、<code>element.detachEvent(&#39;on&#39;+type,handler)</code></li>
+<li>其他:<code>element.addEventListener(type,handler,false)</code>、<code>element.removeEventListener(type,handler,false)</code></li>
+</ul>
+<h3 id="对象顶端和窗口中可见内容的最顶端之间的距离"><a href="#对象顶端和窗口中可见内容的最顶端之间的距离" class="headerlink" title="对象顶端和窗口中可见内容的最顶端之间的距离"></a>对象顶端和窗口中可见内容的最顶端之间的距离</h3><ul>
+<li>ie:<code>document.documentElement.scrollTop</code></li>
+<li>其他:<code>document.body.scrollTop</code></li>
+</ul>
+<h3 id="获取属性"><a href="#获取属性" class="headerlink" title="获取属性"></a>获取属性</h3><ul>
+<li>ie:<code>element.currentStyle.height</code></li>
+<li>其他:<code>window.getComputedStyle(element, null).height</code></li>
+</ul>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/blog/2016/08/17/css3之selector辨析/" itemprop="url">
-              
-                <span itemprop="name">css3之selector辨析</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-17T20:56:55+08:00"
-              content="2016-08-17" >
-          08-17
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/ie/" rel="tag">#ie</a>
+          
+            <a href="/blog/tags/difference/" rel="tag">#difference</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/05/17/es6中的循环与闭包/" rel="next" title="es6中的循环与闭包--《你不知道的JavaScript》读书笔记">
+                <i class="fa fa-chevron-left"></i> es6中的循环与闭包--《你不知道的JavaScript》读书笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/07/01/dom/" rel="prev" title="dom操作">
+                dom操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/05/31/ie-difference/"
+     data-title="ie和其他浏览器的差异"
+     data-content=""
+     data-url="http://laihaibo.github.io/blog/blog/2016/05/31/ie-difference/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -294,6 +481,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/31/ie-difference/"
+           data-title="ie和其他浏览器的差异" data-url="http://laihaibo.github.io/blog/blog/2016/05/31/ie-difference/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -313,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/blog/images/avatar.gif"
@@ -377,6 +581,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#event"><span class="nav-number">1.</span> <span class="nav-text">event</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻止冒泡"><span class="nav-number">2.</span> <span class="nav-text">阻止冒泡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻止默认事件"><span class="nav-number">3.</span> <span class="nav-text">阻止默认事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件目标"><span class="nav-number">4.</span> <span class="nav-text">事件目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定-解除事件"><span class="nav-number">5.</span> <span class="nav-text">绑定/解除事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象顶端和窗口中可见内容的最顶端之间的距离"><span class="nav-number">6.</span> <span class="nav-text">对象顶端和窗口中可见内容的最顶端之间的距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取属性"><span class="nav-number">7.</span> <span class="nav-text">获取属性</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -473,6 +688,10 @@
   
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

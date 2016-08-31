@@ -790,6 +790,135 @@
             
               
                 
+                <a class="post-title-link" href="/blog/2016/05/31/ie-difference/" itemprop="url">
+                  ie和其他浏览器的差异
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T15:44:40+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/05/31/ie-difference/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/ie-difference/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <a id="more"></a>
+<h3 id="event"><a href="#event" class="headerlink" title="event"></a>event</h3><ul>
+<li>ie: <code>window.event</code></li>
+<li>其他: <code>event</code></li>
+</ul>
+<h3 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡"></a>阻止冒泡</h3><ul>
+<li>ie:   <code>e.cancelBubble=true</code></li>
+<li>其他:   <code>e.stopPropagation()</code></li>
+</ul>
+<h3 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h3><ul>
+<li>ie:   <code>e.returnValue=false</code></li>
+<li>其他:   <code>e.preventDefault()</code></li>
+</ul>
+<h3 id="事件目标"><a href="#事件目标" class="headerlink" title="事件目标"></a>事件目标</h3><ul>
+<li>ie:<code>e.srcElement</code></li>
+<li>其他:<code>e.target</code></li>
+</ul>
+<h3 id="绑定-解除事件"><a href="#绑定-解除事件" class="headerlink" title="绑定/解除事件"></a>绑定/解除事件</h3><ul>
+<li>ie:<code>element.attachEvent(&#39;on&#39;+type,handler)</code>、<code>element.detachEvent(&#39;on&#39;+type,handler)</code></li>
+<li>其他:<code>element.addEventListener(type,handler,false)</code>、<code>element.removeEventListener(type,handler,false)</code></li>
+</ul>
+<h3 id="对象顶端和窗口中可见内容的最顶端之间的距离"><a href="#对象顶端和窗口中可见内容的最顶端之间的距离" class="headerlink" title="对象顶端和窗口中可见内容的最顶端之间的距离"></a>对象顶端和窗口中可见内容的最顶端之间的距离</h3><ul>
+<li>ie:<code>document.documentElement.scrollTop</code></li>
+<li>其他:<code>document.body.scrollTop</code></li>
+</ul>
+<h3 id="获取属性"><a href="#获取属性" class="headerlink" title="获取属性"></a>获取属性</h3><ul>
+<li>ie:<code>element.currentStyle.height</code></li>
+<li>其他:<code>window.getComputedStyle(element, null).height</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/blog/2016/05/17/es6中的循环与闭包/" itemprop="url">
                   es6中的循环与闭包--《你不知道的JavaScript》读书笔记
                 </a>
@@ -918,7 +1047,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -928,7 +1057,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
