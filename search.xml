@@ -6,9 +6,8 @@
     <entry>
       <title><![CDATA[使用nginx反向代理解决web api调用时产生的跨域问题]]></title>
       <url>http://laihaibo.github.io/blog/blog/2016/08/28/domain/</url>
-      <content type="html"><![CDATA[<p>在慕课网学习有半年多了，裸辞也有一个月了，在休息了小半个暑假之后，准备在家附近找个工作。第一次面试就进了，也算是转行成功，(‘’)。 </p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上班第一天，老板交给我个任务，简单来说就是调用数据服务商提供的webAPI，来获取数据，展示给业务人员，并存储到数据库中。不过目前公司就我一个做开发，是的，只有我一个“程序员”。初步研究，我觉得如果先不做数据库操作还是挺简单的。通过一个Ajax嵌套另一个Ajax就可以获取数据了，然后再呈现在网页上。 </p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>然后就出问题了.<br><img src="http://obzb8xxij.bkt.clouddn.com/ngnix_slove_ajax_problem.jpg" alt="问题描述"></p>
+      <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>想要调用数据服务商提供的webAPI，来获取数据。初步研究，我觉得如果先不做数据库操作还是挺简单的。通过一个Ajax嵌套另一个Ajax就可以获取数据了，然后再呈现在网页上。<br><a id="more"></a></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>然后就出问题了。<br><img src="http://obzb8xxij.bkt.clouddn.com/ngnix_slove_ajax_problem.jpg" alt="问题描述"></p>
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><h3 id="为什么会出现options？"><a href="#为什么会出现options？" class="headerlink" title="为什么会出现options？"></a>为什么会出现options？</h3><p>前台跨域get请求，由于CORS（cross origin resource share）规范的存在，浏览器会首先发送一次options嗅探，同时header带上origin，判断是否有跨域请求权限，服务器响应access control allow origin的值，供浏览器与origin匹配，如果匹配则正式发送get请求</p>
 <h3 id="XMLHttpReuest-cannot-load"><a href="#XMLHttpReuest-cannot-load" class="headerlink" title="XMLHttpReuest cannot load?"></a>XMLHttpReuest cannot load?</h3><p>跨域失败 </p>
 <h2 id="解决方案-why-nginx？"><a href="#解决方案-why-nginx？" class="headerlink" title="解决方案 why nginx？"></a>解决方案 why nginx？</h2><p>想了蛮多解决方案，然而被一一否决</p>

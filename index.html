@@ -321,43 +321,12 @@
 
       
         
-          
-            <p>在慕课网学习有半年多了，裸辞也有一个月了，在休息了小半个暑假之后，准备在家附近找个工作。第一次面试就进了，也算是转行成功，(‘’)。 </p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上班第一天，老板交给我个任务，简单来说就是调用数据服务商提供的webAPI，来获取数据，展示给业务人员，并存储到数据库中。不过目前公司就我一个做开发，是的，只有我一个“程序员”。初步研究，我觉得如果先不做数据库操作还是挺简单的。通过一个Ajax嵌套另一个Ajax就可以获取数据了，然后再呈现在网页上。 </p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>然后就出问题了.<br><img src="http://obzb8xxij.bkt.clouddn.com/ngnix_slove_ajax_problem.jpg" alt="问题描述"></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><h3 id="为什么会出现options？"><a href="#为什么会出现options？" class="headerlink" title="为什么会出现options？"></a>为什么会出现options？</h3><p>前台跨域get请求，由于CORS（cross origin resource share）规范的存在，浏览器会首先发送一次options嗅探，同时header带上origin，判断是否有跨域请求权限，服务器响应access control allow origin的值，供浏览器与origin匹配，如果匹配则正式发送get请求</p>
-<h3 id="XMLHttpReuest-cannot-load"><a href="#XMLHttpReuest-cannot-load" class="headerlink" title="XMLHttpReuest cannot load?"></a>XMLHttpReuest cannot load?</h3><p>跨域失败 </p>
-<h2 id="解决方案-why-nginx？"><a href="#解决方案-why-nginx？" class="headerlink" title="解决方案 why nginx？"></a>解决方案 why nginx？</h2><p>想了蛮多解决方案，然而被一一否决</p>
-<ul>
-<li>通过后端调用接口，这样绕过浏览器获取数据，自然也不会有同源限制。然后，本公司就只有我一个人，想要快速实现，显然不现实</li>
-<li>jsonp，然而api服务商并未提供 cros，同上，问了也没人回答</li>
-<li>iframe，要依赖hack实现，响应数据量大时需要切片、多次设置fragment并轮询，响应频繁时可能失效，所以也被我抛弃</li>
-</ul>
-<p>最后，通过大量的搜索，终于发现一个方法：nginx反向代理 </p>
-<blockquote>
-<p>nginx作为反向代理服务器，就是把http请求转发到另一个或者一些服务器上。通过把本地一个url前缀映射到要跨域访问的web服务器上，就可以实现跨域访问。对于浏览器来说，访问的就是同源服务器上的一个url。而nginx通过检测url前缀，把http请求转发到后面真实的物理服务器。并通过rewrite命令把前缀再去掉。这样真实的服务器就可以正确处理请求，并且并不知道这个请求是来自代理服务器的。 </p>
-</blockquote>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>在nginx.conf中编辑</p>
-<pre><code>server { 
-   location / { 
-       root html; index index.html index.htm; 
-        //允许cros跨域访问 
-        add_header &apos;Access-Control-Allow-Origin&apos; *; 
-       } 
-       //自定义本地路径 
-   location /apis {
-       rewrite ^.+apis/?(.*)$ /$1 break;
-       include uwsgi_params;
-       proxy_pass http://e.apix.cn; 
-       }
-   }
-</code></pre><p>然后我把项目部署在nginx的html根目录下，在ajax调用时设置url<br>从<code>http://e.apix.cn/apixanalysis/mobile/grant/phone/smsCode/verify</code><br>变为<code>/apis/apixanalysis/mobile/grant/phone/smsCode/verify</code><br>然后成功解决 </p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>nginx解决跨域问题，只需要修改一下配置文件即可。超方便简单</li>
-<li>多思考，多用搜索引擎</li>
-</ul>
-
-          
+          <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>想要调用数据服务商提供的webAPI，来获取数据。初步研究，我觉得如果先不做数据库操作还是挺简单的。通过一个Ajax嵌套另一个Ajax就可以获取数据了，然后再呈现在网页上。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/blog/2016/08/28/domain/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
