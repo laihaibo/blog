@@ -12,7 +12,7 @@
 <h3 id="XMLHttpReuest-cannot-load"><a href="#XMLHttpReuest-cannot-load" class="headerlink" title="XMLHttpReuest cannot load?"></a>XMLHttpReuest cannot load?</h3><p>跨域失败 </p>
 <h2 id="解决方案-why-nginx？"><a href="#解决方案-why-nginx？" class="headerlink" title="解决方案 why nginx？"></a>解决方案 why nginx？</h2><p>想了蛮多解决方案，然而被一一否决</p>
 <ul>
-<li>通过后端调用接口，这样绕过浏览器获取数据，自然也不会有同源限制。然后，本公司就只有我一个人，想要快速实现，显然不现实</li>
+<li>通过后端调用接口，这样绕过浏览器获取数据，自然也不会有同源限制。然而，我的数据库操作还不太6</li>
 <li>jsonp，然而api服务商并未提供 cros，同上，问了也没人回答</li>
 <li>iframe，要依赖hack实现，响应数据量大时需要切片、多次设置fragment并轮询，响应频繁时可能失效，所以也被我抛弃</li>
 </ul>
